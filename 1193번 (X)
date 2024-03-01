@@ -1,0 +1,24 @@
+X = int(input())
+base = 1
+k = 2
+while X > base:
+    base += k
+    k += 1
+if k % 2 == 1:
+    b = 1
+    a = k - b
+else:
+    a = 1
+    b = k - a
+ptr = base
+while True:
+    if (ptr == X):
+        print(str(a) + '/' + str(b))
+        break
+    ptr -= 1
+    if k % 2 == 1:
+        b += 1
+        a = k - b
+    else:
+        a += 1
+        b = k - a
