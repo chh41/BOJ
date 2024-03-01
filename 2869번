@@ -1,0 +1,8 @@
+a, b, v = map(int, input().split())
+x = a-b
+z = v - a
+if z%x == 0:
+    zz = z//x + 1
+else:
+    zz = z//x + 2
+print(zz)
