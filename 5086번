@@ -1,0 +1,16 @@
+while True: # 테스트 케이스의 개수가 정해지지 않았기에 while 반복문의 조건을 True로 해줘서 무한 반복
+    a, b = map(int, input().split())  # a b 로 첫번째 수와 2번째 수를 받음 map(x,y)함수는 2개 이상의 y를 입력 받아 x를 수행시키고 변수에 저장함
+
+    if a == 0 and b == 0:   # 첫번째 수와 두번쨰 수가 둘 다 0 일 때 종료되도록 조건을 걸어놓음.
+        break
+
+    if a>b:                      # 먼저 배수와 약수를 구분하려면 첫번째 수가 큰 수인지 두번째 수가 큰 수인지 구분해야되기에 먼저 a와 b를 대소비교함
+        if a%b == 0:             # a를 b로 나누었을 때 나머지가 0이라는 것은 b를 곱했을 때 a가 나옴
+            print("multiple")
+        else:                    # 나머지가 0이 아니란 것은 나눠지지 않는 다는 것
+            print("neither")
+    else:                        # 두번째 수가 더 큼
+        if b%a == 0:             
+            print("factor")
+        else:
+            print("neither")
