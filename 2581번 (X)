@@ -8,7 +8,7 @@ for i in range(a,b+1):    # a~b까지 반복
     so = True             # 자연수가 소수인지 아닌지 판별했다는 변수
     for j in range(2, i): # a까지 나누기
         if i%j == 0:      # 2부터 시작해서 i까지 나누는데 만약 나누어 떨어지는게 있다면 그 자연수는 소수가 아니다
-            so = False    # 소수가 아니기 때문에 False 저장
+            so = False    # 소수가 아니기 때문에 False 저장 
             break         # 소수가 아니니 더 계산해볼 필요 없음
 
     if so == True:        # 전부 나눠도 값이 안나왔다면 그 수는 소수이기에 리스트에 추가
