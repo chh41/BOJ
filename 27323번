@@ -1,0 +1,4 @@
+a = int(input())    # 직사각형의 세로 값 입력
+b = int(input())    # 직사각형의 가로 값 입력
+
+print(a*b)          # 세로 X 가로 값 출력
