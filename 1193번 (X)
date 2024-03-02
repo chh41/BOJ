@@ -1,4 +1,4 @@
-X = int(input())
+X = int(input()) 
 base = 1
 k = 2
 while X > base:
