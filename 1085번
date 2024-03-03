@@ -1,0 +1,9 @@
+x, y, q, w = map(int, input().split())    # x,y 값과 직사각형의 오른쪽 위 꼭짓점 값을 받음
+a = []                                    # 거리 값들을 넣을 리스트 생성
+
+a.append(x)                               # x부터 0까지의 값
+a.append(y)                               # y부터 0까지의 값
+a.append(q-x)                             # q부터 x까지의 값
+a.append(w-y)                             # w부터 y까지의 값
+
+print(min(a))                             # x, y, q-x, w-y 중 최소값 출력
