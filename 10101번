@@ -1,0 +1,12 @@
+a = int(input())          # 세 각 입력 받기
+b = int(input())
+c = int(input())
+
+if a == 60 and b == 60 and c == 60:  # 전부 60도이면 정삼각형
+    print("Equilateral")
+elif a + b + c != 180:               # 세 각의 합이 180이 아니면 오류
+    print("Error")
+elif a == b or b == c or c == a:     # 전부 60도가 아니고 세 각의 합이 180이지만 2각이 같은 경우 이등변삼각형
+    print("Isosceles")
+elif a != b and b != c and a != c:   # 세 각 모두 다르지만 세 각의 합이 180인 삼각형
+    print("Scalene")
