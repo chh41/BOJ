@@ -1,0 +1,12 @@
+a = int(input())  # 자연수 입력
+i = 2             # 자연수를 나눌 인수 변수
+x = []            # 인수 리스트
+while i <= a:
+    if a%i == 0:  # 나누어 떨어지면 인수
+      x.append(i)
+      a = a/i    
+    else:         # 나누어 떨어지지 않으면 인수 변수를 1 씩 늘림
+        i += 1
+
+for z in x:
+    print(z)
