@@ -1,0 +1,13 @@
+r = int(input())                      # 옥구슬의 갯수 입력
+a = []                                # 옥구슬의 x좌표값 저장할 리스트
+b = []                                # 옥구슬의 y좌표값 저장할 리스트
+
+for i in range(r):
+    x, y = map(int, input().split())
+    a.append(x)
+    b.append(y)
+
+ax = max(a) - min(a)                  # 옥구슬 x좌표값 중 가장 큰 값과 작은 값을 빼서 가로 길이를 구함
+by = max(b) - min(b)                  # 옥구슬 y좌표값 중 가장 큰 값과 작은 값을 빼서 세로 길이를 구함
+
+print(ax * by)
