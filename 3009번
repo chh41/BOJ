@@ -1,0 +1,18 @@
+a1, b1 = map(int, input().split())  # 첫번쨰 좌표 입력
+a2, b2 = map(int, input().split())  # 두번째 좌표 입력
+a3, b3 = map(int, input().split())  # 세번째 좌표 입력
+a = 0                               # 네번쨰 좌표의 x값 저장할 변수
+b = 0                               # 네번쨰 좌표의 y값 저장할 변수
+if a1 == a2:                        # a1과 a2가 같으면 a3과 같은 값의 좌표 필요
+    a = a3
+elif a1 == a3:
+    a = a2
+elif a2 == a3:
+    a = a1
+if b1 == b2:                         # b1과 b2가 같으면 b3과 같은 값의 좌표 필요
+    b = b3
+elif b1 == b3:
+    b = b2
+elif b2 == b3:
+    b = b1
+print(a,b)
