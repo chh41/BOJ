@@ -1,0 +1,16 @@
+x = []                                                      # 세 변의 길이 받는 리스트
+a, b, c = map(int, input().split())                         # 세 변의 길이 입력
+x.append(a)
+x.append(b)
+x.append(c)
+x.sort()                                                    # 세 변의 길이 오름차순 정리
+while True:
+    if x[0] + x[1] > x[2]:                                  # 긴 변의 길이가 두 변의 길이의 합보다 작으면 삼각형 성립되어 둘레 출력
+        print(x[0]+x[1]+x[2])
+        break
+
+    if x[0] == x[1] == x[2]:                                # 세 변이 같으면 정삼각형이므로 둘레 출력
+        print(x[0]+x[1]+x[2])
+        break
+
+    x[2] -= 1                                               # 삼각형이 성립되지 않았으므로 가장 긴변의 길이를 1 씩 줄임
