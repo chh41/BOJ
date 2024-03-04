@@ -1,0 +1,10 @@
+x = []                      # 5개의 자연수 받을 리스트
+for i in range(5):
+    x.append(int(input()))  # 5개의 자연수 입력
+
+x.sort()                    # 리스트 오름차순 정렬
+total = 0
+for i in x:
+    total += i              # 자연수의 총합
+print(total//5)             # 자연수 평균
+print(x[2])                 # 중앙값
