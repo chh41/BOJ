@@ -1,0 +1,10 @@
+a = int(input())            # 갯수 입력
+x = []                      # 정수 입력받을 리스트
+
+for i in range(a):          
+    x.append(int(input()))  # 정수 입력
+
+x.sort()                    # 리스트 오름차순 정렬
+
+for i in x:
+    print(i)
