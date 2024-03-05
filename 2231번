@@ -1,0 +1,16 @@
+a = int(input())               # 자연수 입력
+x = 0                         
+aa = 0
+while True:
+    aa = x
+    z = list(map(int, str(x))) # 입력 받은 자연수를 자리로 나누어 리스트에 저장
+    for i in range(len(z)):    
+        aa += int(z[i])        # x에 자리수의 합을 더함
+
+    if aa == a:
+        print(x)
+        break
+    elif x > a:                # x가 a보다 커지면 더 이상 생성자를 찾을 수 없으므로 0 출력
+        print(0)
+        break
+    x += 1
