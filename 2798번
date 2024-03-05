@@ -1,0 +1,11 @@
+a, b = map(int, input().split())                              # 카드의 갯수와 기준값 입력
+x = input().split()
+card = 0                                                      # 합을 저장할 리스트
+for i in range(a):                                            
+    for j in range(i+1, a):                                   # 카드를 한번씩 써야되기 때문에 i+1번부터 a번까지
+        for k in range(j+1, a):                               # 카드를 한번씩 써야되기 때문에 j+1번부터 a번까지
+            if card < int(x[i]) + int(x[j]) + int(x[k]):
+                if int(x[i]) + int(x[j]) + int(x[k]) <= b:
+                    card = int(x[i]) + int(x[j]) + int(x[k])
+
+print(card)
