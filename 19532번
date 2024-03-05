@@ -1,0 +1,6 @@
+a, b, c, aa, bb, cc = map(int, input().split())  # a, b, c, d, e, f 입력
+
+for i in range(-999,1000):
+    for j in range(-999,1000):                   # x, y를 찾기 위한 이중반복문
+        if a*i+b*j == c and aa*i+bb*j == cc:
+            print(i,j)
