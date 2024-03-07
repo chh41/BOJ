@@ -1,0 +1,15 @@
+import sys                          # 메모리 초과로 틀림 - ( 검색해보니 메모리 초과된 이유가 있었음 )
+                                    # 1. input 사용  ( input이 아닌 sys.stdin.readline 사용, sys.stdin.readline이 훨씬 속도 빠름 )
+input = sys.stdin.readline          # 2. for문 안에서 append 사용 ( 쓰지 않기 )
+                                    # 3. sort 사용
+x = int(input())
+a = [0]*10001                       # 정수 입력 최댓값이 10000
+
+for i in range(x):
+    a[int(input())] += 1            # 입력 받은 정수를 바로 a의 인덱스로 사용
+
+
+for i in range(len(a)):
+    if a[i] != 0:                   # a[i]가 0이 아니라는 것은 9열에서 입력 받은 인덱스라는 것
+        for j in range(a[i]):
+            print(i)
