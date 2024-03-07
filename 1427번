@@ -1,0 +1,13 @@
+import sys
+
+input = sys.stdin.readline
+
+a = input()            # 정수형이 아닌 문자로 받아서 7열에서 i에 들어갈 수 있도록 함
+z = []
+for i in a:            # 입력값의 첫자리부터 하나씩 리스트 z에 추가
+    z.append(i)
+
+z.sort(reverse=True)   # 리스트 z를 내림차순으로 정렬
+
+for i in z:
+    print(i, end='')   # 리스트 z를 붙혀서 한줄로 출력
