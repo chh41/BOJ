@@ -1,0 +1,15 @@
+import sys                        
+
+input = sys.stdin.readline
+
+x,y = map(int,input().split())      
+s = set()                            # Y번 입력 받는 값을 x에서 입력받는 값으로 비교해야되서 x를 집합으로 설정
+a = 0
+for i in range(x):
+    s.add(input())                   # 집합의 추가 함수 ( 약간 리스트의 어펜드 느낌 )
+
+for i in range(y):
+    if input() in s:                
+        a += 1
+
+print(a)
