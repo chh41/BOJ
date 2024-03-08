@@ -1,0 +1,17 @@
+import sys                        # 시간 초과 ( 문제는 풀었는데 시간 초과를 해결할 방법을 못 찾음 )
+
+input = sys.stdin.readline
+
+x = int(input())
+a = set(input().split())          # set 함수는 () 안의 내용을 집합 구조로 만듬 {1,2,3}
+y = int(input())                  # 집합 구조 안에 있는 놈들은 각자 고유의 값을 받음
+b = input().split()               # 각자 고유 값을 받기에 중복되는 값이 있으면 안됨.
+
+
+for i in range(y):
+    if b[i] in a:                 # 그냥 리스트에 in을 하면 순차적으로 검사하기에 오래걸림
+        b[i] = 1                  # 근데 set을 사용해서 고유 값을 불러오기에 빠름
+    else:
+        b[i] = 0    
+
+print(*b)
