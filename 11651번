@@ -1,0 +1,13 @@
+import sys
+
+input = sys.stdin.readline
+
+x = int(input())                                    # 좌표 갯수
+a = []
+for i in range(x):
+    a.append(list(map(int, input().split()))[::-1]) # list에 [::-1] 을 붙혀줘서 입력 받은 값을 뒤집어서 저장 = y값이 앞, x값이 뒤
+
+a.sort()                                            # 정렬하면 y값 기준으로 정렬 후 x값 기준으로 정렬
+
+for i in range(x):
+    print(*a[i][::-1])                              # 출력할땐 x,y로 나와야되니까 또 [::-1] 붙혀줌
