@@ -1,0 +1,25 @@
+import sys
+
+input = sys.stdin.readline
+
+x = int(input())
+
+z = set()                        # set의 in 함수 시간 복잡도는 O(1), list는 O(n) (remove도 동일) 그래서 set 사용
+
+for i in range(x):
+    a, b = input().split()
+
+    if b == "enter":             # b가 enter면 set에 포함, leave면 이미 입장되었기에 a 제거  시간 복잡도 ( O(1) )
+        z.add(a)
+    elif b == "leave":
+        z.remove(a)
+c = [''] * len(z)                # set은 출력 순서가 완전 랜덤임
+d = 0
+for i in z:                      # set의 인자들 c 리스트로 옮겨 담기
+    c[d] = i
+    d += 1
+
+c.sort(reverse=True)             # 옮겨 담은 거 역순으로 정렬
+
+for i in range(len(c)):          # 출력
+    print(c[i])
