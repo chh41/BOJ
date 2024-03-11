@@ -1,0 +1,20 @@
+import sys
+
+input = sys.stdin.readline
+
+x = int(input())                        # 주어지는 카드 갯수
+
+a = [0] * 20000001                      # 주어지는 카드 숫자 범위 -10000000 ~ 10000000
+
+b = input().split()
+for i in b:
+    a[int(i)+10000000] += 1             # 입력된 값 바로바로 +1 시켜줌
+y = int(input())                        # 갖고있는 카드 갯수
+c = [0] * y      
+z = input().split()                     # 갖고있는 카드 수
+aa = 0
+for i in z:
+    c[aa] = a[int(i)+10000000]          # 카드 갯수 리스트
+    aa += 1
+
+print(*c)
