@@ -1,0 +1,11 @@
+import sys
+
+input = sys.stdin.readline
+
+x,y = map(int,input().split())
+
+a = set(input().split())          
+b = set(input().split())
+c = len(a-b)                    # set은 집합 연산이 됨 ( 교집합, 합집합, 차집합, 교집합을 뺀 나머지 )
+c += len(b-a)                   # 교집합은 &, 합집합 | ( 쉬프트 역슬래시), 차집합 -, 교집합을 뺀 나머지 ^
+print(c)
