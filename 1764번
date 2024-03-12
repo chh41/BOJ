@@ -1,0 +1,19 @@
+import sys
+
+input = sys.stdin.readline
+
+x,y = map(int,input().split())      # 듣의 수와 보의 수 입력
+
+a = set()                           # 리스트가 아닌 set 집합을 쓴 이유는 in 리스트를 사용하면 O(n)이지만 in set을 쓰면 O(1)이기에 훨씬 빠름
+b = []
+for i in range(x):
+    a.add(input().strip())          # strip() 써야 \n 입력을 안받음
+
+for i in range(y):
+    s = str(input().strip())        # 보는 굳이 리스트나 set 안쓰고 바로 입력 받은 값 in set 해서 중복값만 b 리스트에 추가
+    if s in a:
+        b.append(s)                
+b.sort()                            # sort로 사전 순으로 정렬
+print(len(b))
+for i in range(len(b)):
+    print(b[i])
