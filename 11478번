@@ -1,0 +1,14 @@
+import sys
+
+input = sys.stdin.readline
+
+x = input().strip()          # \n 입력 안받도록 strip 써서 양 끝 공백, 개행 문자 삭제
+
+a = set()                    # 리스트말고 집합 쓴 이유는 in 썼을 떄의 시간 복잡도가 집합이 훨씬 빠름
+
+for i in range(len(x)):
+    for j in range(len(x)+1):  # +1 해줘야되는 이유는 x[0:0] 일때 '' 인 none 값이 들어가는 것 같음
+        if not x[i:j] in a:
+            a.add(x[i:j])
+a.remove('')                   # '' 값이 x[0:0]일때 무조건 들어가니까 제거
+print(len(a))
