@@ -1,0 +1,29 @@
+import sys
+
+input = sys.stdin.readline
+
+x = int(input())
+a = [0] * x
+q = 0
+
+
+
+for i in range(x):
+    a[i] = list(input())
+    bre = 0                    # 출력 2번 못하게 막는 변수
+    q = 0                      # 괄호 개수 세는 변수
+    for j in a[i]:
+        if j == '(':
+            q += 1
+
+        elif j == ")":
+            q -= 1
+            if q < 0:          # 여는 괄호보다 닫는 괄호가 많으면 안됨
+                print("NO")
+                bre = 1
+                break
+    if bre == 0:
+        if q == 0:
+            print("YES")
+        else:
+            print("NO")
