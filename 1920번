@@ -1,0 +1,19 @@
+import sys
+
+input = sys.stdin.readline
+
+x = int(input())
+
+a = set(map(int, input().split()))  #( list보다 set 이 훨씬 빠름 )
+
+y = int(input())
+
+b = list(map(int, input().split()))
+
+
+
+for i in b:
+    if i in a:
+        print("1")
+    else:
+        print("0")
