@@ -1,0 +1,35 @@
+import sys
+
+input = sys.stdin.readline
+
+x = int(input())
+stack=[]
+                                # 스택 문제
+for i in range(x):
+    a = input().split()
+
+    if a[0]=='1':
+        stack.append(a[1])      # 스택의 push를 append로 구현
+
+    elif a[0]=='2':
+        if len(stack) != 0:     # 리스트가 0이면 -1 출력 아니면 맨 마지막에 넣은 값 = 최상위 스택 출력, 삭제
+            print(stack[-1])    # 최상위 스택 출력
+            stack.pop()         # pop은 마지막에 넣은 값을 삭제
+        else:
+            print("-1")
+
+    elif a[0]=='3':
+        print(len(stack))      
+
+    elif a[0]=='4':
+        if len(stack) == 0:      
+            print("1")
+        else:
+            print("0")
+
+    elif a[0]=='5':
+        if len(stack) != 0:
+            print(stack[-1])
+        else:
+            print("-1")
+
