@@ -1,0 +1,20 @@
+import sys
+
+input = sys.stdin.readline
+
+x = int(input())
+stack=[]
+total = 0
+
+for i in range(x):
+    a = int(input())
+
+    if a == 0:
+        stack.pop()
+    else:
+        stack.append(a)
+
+for i in stack:
+    total += i
+
+print(total)
