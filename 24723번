@@ -1,0 +1,6 @@
+import sys
+
+input = sys.stdin.readline
+
+x = int(input())
+print(2**x) # 한 층 내려갈 때마다 2가 곱해지므로 2^x
